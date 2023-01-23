@@ -1,0 +1,24 @@
+<div style="border: 1px solid grey; width: 200px">
+  <form class="form-inline">
+    <label>Department Name</label>
+    <input type="text" #department placeholder="department" />
+    <label>Student Count</label>
+    <input type="text" #count placeholder="count" />
+
+    <button
+      style="margin-left: 70px"
+      type="button"
+      (click)="submit(department, count)"
+    >
+      Add
+    </button>
+  </form>
+</div>
+
+<highcharts-chart
+  *ngIf="chartOptions"
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+  style="width: 100%; height: 600px; display: block"
+>
+</highcharts-chart>
